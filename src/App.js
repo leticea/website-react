@@ -1,6 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./Router";
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+
 import "./App.css";
 
 export function App() {
@@ -9,6 +11,7 @@ export function App() {
       <BrowserRouter>
         <Navbar />
         <Router />
+        <Footer />
       </BrowserRouter>
     </div>
   );
