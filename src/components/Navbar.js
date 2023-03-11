@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/pizzaLogo.png";
 import { NavLink } from "react-router-dom";
 import ReorderIcon from "@mui/icons-material/Reorder";
@@ -6,9 +6,15 @@ import ReorderIcon from "@mui/icons-material/Reorder";
 import "../styles/Navbar.css";
 
 export function Navbar() {
+  const [openLinks, setOpenLinks] = useState(false);
+
+  const handleToggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  };
+
   return (
     <div className="navbar">
-      <div className="leftSide">
+      <div className="leftSide" id={openLinks ? "open" : "close"}>
         <img src={Logo} />
         <div className="hiddenLinks">
           <NavLink to="/" title="Home">
@@ -38,7 +44,7 @@ export function Navbar() {
         <NavLink to="/contact" title="Contact">
           Contact
         </NavLink>
-        <button>
+        <button onClick={handleToggleNavbar}>
           <ReorderIcon />
         </button>
       </div>
