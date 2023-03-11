@@ -2,6 +2,8 @@ import React from "react";
 import Logo from "../assets/pizzaLogo.png";
 import { NavLink } from "react-router-dom";
 
+import "../styles/Navbar.css";
+
 export function Navbar() {
   return (
     <div className="navbar">
@@ -9,7 +11,6 @@ export function Navbar() {
         <img src={Logo} />
       </div>
       <div className="rightSide">
-        <nav>
           <NavLink to="/" title="Home">
             Home
           </NavLink>
@@ -22,7 +23,6 @@ export function Navbar() {
           <NavLink to="/contact" title="Contact">
             Contact
           </NavLink>
-        </nav>
       </div>
     </div>
   );
