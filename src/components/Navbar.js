@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/pizzaLogo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function Navbar() {
   return (
@@ -9,10 +9,20 @@ export function Navbar() {
         <img src={Logo} />
       </div>
       <div className="rightSide">
-        <Link to="/">Home</Link>
-        <Link to="/menu">Menu</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <nav>
+          <NavLink to="/" title="Home">
+            Home
+          </NavLink>
+          <NavLink to="/menu" title="Menu">
+            Menu
+          </NavLink>
+          <NavLink to="/about" title="About">
+            About
+          </NavLink>
+          <NavLink to="/contact" title="Contact">
+            Contact
+          </NavLink>
+        </nav>
       </div>
     </div>
   );
