@@ -8,7 +8,15 @@ export function Contact() {
         className="leftSide"
         style={{ backgroundImage: `url(${PizzaLeft})` }}
       ></div>
-      <div className="rightSide"></div>
+      <div className="rightSide">
+        <h1>Contact Us</h1>
+
+        <form id="contact-form" method="POST">
+          <label htmlFor="name">Full Name</label>
+          <input name="name" placeholder="Enter full name..." type="text" />
+
+        </form>
+      </div>
     </div>
   );
 }
