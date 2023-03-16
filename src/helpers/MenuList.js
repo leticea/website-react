@@ -19,7 +19,7 @@ export const MenuList = [
   {
     name: "Leticia Special Pizza",
     image: LeticiaSpecial,
-    price: 35.50,
+    price: 35.5,
   },
   {
     name: "Vegan Pizza",
